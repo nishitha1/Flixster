@@ -31,11 +31,11 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
       <img src="recording_flixter_landscape.gif" width=400>
    </div> -->
    <div class="column">
-      <img src="recording_flixter_potrait.gif" width=250><br>
+      <img src="recording_flixter_landscape.gif" width=400><br>
    </div>
 </div>
 
-<img src="recording_flixter_landscape.gif" width=400>
+<!-- <img src="recording_flixter_landscape.gif" width=400> -->
 
 ### Notes
 Describe any challenges encountered while building the app.
