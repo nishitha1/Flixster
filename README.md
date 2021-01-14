@@ -23,19 +23,20 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 - [ ] (2pts) For popular movies (i.e. a movie voted for more than 5 stars), the full backdrop image is displayed. Otherwise, a poster image, the movie title, and overview is listed. Use Heterogenous RecyclerViews and use different ViewHolder layout files for popular movies and less popular ones.
 
 ### App Walkthough GIF
-<div class ="row">
+<!--<div class ="row">
    <div class="column">
       <img src="Flixter_app_walkthrough.gif" width=250>
    </div>
 <!--    <div class="column">
       <img src="recording_flixter_landscape.gif" width=400>
    </div> -->
-   <div class="column">
-      <img src="recording_flixter_landscape.gif" width=400><br>
+<!--   <div class="column">
+      <img src="recording_flixter_landscape.gif" width=400>
    </div>
-</div>
+</div> -->
 
-<!-- <img src="recording_flixter_landscape.gif" width=400> -->
+ <img src="Flixter_app_walkthrough.gif" width=250>
+<img src="recording_flixter_landscape.gif" width=400>
 
 ### Notes
 Describe any challenges encountered while building the app.
