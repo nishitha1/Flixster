@@ -20,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
+import com.bumptech.glide.load.resource.bitmap.CenterInside;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.flixster.DetailActivity;
@@ -98,15 +99,10 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
                 imageUrl = movie.getPosterPath();
             }
             // added placeholder
-//            int radius = 5;
-
-//            Glide.with(context).load(imageUrl).transform(new BlurTransformation()).into(ivPoster);
-
+            // added rounded corners
 //            Glide.with(context).load(imageUrl).transform(new RoundedCornersTransformation(2, 0)).into(ivPoster);
-//            Glide.with(context).load(imageUrl).apply(new RequestOptions().transform(new RoundedCorners(10))).into(ivPoster);
-            Glide.with(context).load(imageUrl).into(ivPoster);
-
-            //Glide.with(context).load(imageUrl).placeholder(R.drawable.loading).into(ivPoster);
+//            Glide.with(context).load(imageUrl).into(ivPoster);
+            Glide.with(context).load(imageUrl).placeholder(R.drawable.loading).transform(new CenterInside(), new RoundedCorners(25)).into(ivPoster);
             //Glide.with(context).load(imageUrl).placeholder(new ColorDrawable(Color.TRANSPARENT)).into(ivPoster)
 
             //1. Register click listener on the whole row
@@ -122,12 +118,13 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
                         Intent i = new Intent(context, DetailActivity.class);
                         //Pass using parceler
                         i.putExtra("movie", Parcels.wrap(movie));
-                        // Shared element transistion
-//                    Pair<View, String> p1 = Pair.create((View) tvTitle, "title");
-//                    Pair<View, String> p2 = Pair.create((View) tvOverview, "overview");
-//                    ActivityOptionsCompat options = ActivityOptionsCompat.
-//                            makeSceneTransitionAnimation(context, p1, p2);
                         context.startActivity(i);
+                        // Shared element transistion
+//                        Pair<View, String> p1 = Pair.create((View) tvTitle, "title");
+//                        Pair<View, String> p2 = Pair.create((View) tvOverview, "overview");
+//                        ActivityOptionsCompat options = ActivityOptionsCompat.
+//                                makeSceneTransitionAnimation(this, p1, p2);
+//                        context.startActivity(i, options.toBundle());
                     }
                 }
             });
